@@ -2,7 +2,6 @@ module Main where
 import System.Environment
 
 main :: IO ()
-main = do args <- getArgs
-          putStrLn ("Hello, " ++
-                     args !! 0 ++ " + " ++ args !! 1 ++ " = " ++
-                     show(read (args !! 0) + read (args !! 1)))
+main = do putStrLn ("Hi, what's your name?")
+          name <- getLine
+          putStrLn ("Hello, " ++ name)
